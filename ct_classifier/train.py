@@ -304,25 +304,12 @@ def validate(cfg, dataLoader, model):
 
 def main():
 
-    # For Comet to start tracking a training run,
-# just add these two lines at the top of
-# your training script:
-
-    # experiment = comet_ml.Experiment(
-    #     api_key="6D79SKeAIuSjteySwQwqx96nq",
-    #     project_name="cagedbird-classifier"
-    # )
 
     # architecture name: 
     # dataset type:_high
     # batch size:
     # number of epochs: 
     # resume = True # to update an existing experiment... or not
-
-# your model training or evaluation code
-
-# Metrics from this training run will now be
-# available in the Comet UI
 
     # Argument parser for command-line arguments:
     # python ct_classifier/train.py --config configs/exp_resnet18.yaml
@@ -333,6 +320,10 @@ def main():
     # load config
     print(f'Using config "{args.config}"')
     cfg = yaml.safe_load(open(args.config, 'r'))
+
+    run = wandb.init(
+        project=cfg['project_name'],
+        config=cfg)
 
     
     resume = False  # Set this to True if you want to resume an existing experiment
@@ -355,8 +346,7 @@ def main():
     #     # Get the experiment key
     #     experiment_key = experiment.get_key()
 
-     
-    # this is the yaml one loaded as cfg
+
     # init random number generator seed (set at the start)
     init_seed(cfg.get('seed', None))
 
@@ -390,19 +380,15 @@ def main():
 
    
     plt.tight_layout()
-    # plt.show()
-    plt.savefig("val_loader.png")
-
-
-    # Add a debugging breakpoint here
+    plt.savefig("sanity_check.png")
 
     dl_val = create_dataloader(cfg, split='val')
     print ("Length of training dataloader")
 
     # Number of training samples divided by batch size
-    # print(len(dl_train))
+    print(len(dl_train))
     # print ("Length of validation dataloader")
-    # print(len(dl_val))
+    print(len(dl_val))
 
     # initialize model
     model, current_epoch = load_model(cfg) # load_latest_version=True
@@ -431,15 +417,15 @@ def main():
         }
 
         # # Log loss metrics in the same plot
-        # experiment.log_metric("Loss Metrics", [('Training loss', loss_train),('Validation loss', loss_val),], step=current_epoch)
+        wandb.log({'Training loss': loss_train, 'Validation loss': loss_val})
 
         # # Group accuracy metrics in a plot
-        # experiment.log_metric("Accuracy Metrics", [('Training OA accuracy', oa_train),('Validation OA accuracy', oa_val),], step=current_epoch)
+        wandb.log({'Training OA accuracy': oa_train, 'Validation OA accuracy': oa_val})
 
         # # Group mAP metrics in a plot
-        # experiment.log_metric("mAP Metrics", [('Training mAP', mAP_train),('Validation mAP', mAP_val),], step=current_epoch)
+        wandb.log({'Training mAP': mAP_train, 'Validation mAP': mAP_val})
 
-        # experiment.log_metrics(stats, step=current_epoch)
+        wandb.log(stats)
 
 
         #  # Log hyperparameters like the learning rate and the batch size
@@ -449,14 +435,14 @@ def main():
         # # Log the last_lr value as a hyperparameter, which you might only need if you are scheduling
         # experiment.log_parameter("last_lr", last_lr)
 
-        # save_model(cfg, current_epoch, model, stats)
+        save_model(cfg, current_epoch, model, stats)
         
         # # Scheduler step to save, which is at the end of the training loop basically
-        # scheduler.step()
-        # last_lr = scheduler.get_last_lr()
+        scheduler.step()
+        last_lr = scheduler.get_last_lr()
 
         #  # Log learning rate, if you want to see where the steps are for example during training
-        # experiment.log_metric("learning_rate", last_lr[0], step=current_epoch)
+        wandb.log("learning_rate", last_lr[0], step=current_epoch)
 
 
         # # Print the experiment key to load in the evaluation file
