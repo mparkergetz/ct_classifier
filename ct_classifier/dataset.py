@@ -12,11 +12,13 @@
     2022 Benjamin Kellenberger
 '''
 
+
 import os
 import json
 from torch.utils.data import Dataset
-from torchvision.transforms import Compose, Resize, ToTensor
+from torchvision.transforms import Compose, Resize, ToTensor, Pad, functional, RandomVerticalFlip, RandomHorizontalFlip, RandomAdjustSharpness, ColorJitter
 from PIL import Image
+import math
 
 
 class CTDataset(Dataset):
@@ -28,9 +30,43 @@ class CTDataset(Dataset):
         '''
         self.data_root = cfg['data_root']
         self.split = split
-        self.transform = Compose([              # Transforms. Here's where we could add data augmentation (see Björn's lecture on August 11).
-            Resize((cfg['image_size'])),        # For now, we just resize the images to the same dimensions...
-            ToTensor()                          # ...and convert them to torch.Tensor.
+
+        class FixedHeightResize:
+            def __init__(self, size):
+                self.size = size
+                
+            def __call__(self, img):
+                w,h = img.size
+                aspect_ratio = float(h) / float(w)
+                if h>w:
+                    new_w = math.ceil(self.size / aspect_ratio)
+                    img = functional.resize(img, (self.size, new_w))
+                else:
+                    new_h = math.ceil( aspect_ratio * self.size) # it eas / before diving
+                    img = functional.resize(img, (new_h,self.size))
+
+                w,h = img.size # PIL image formats are in w and h, transformed to rgb, h, w later, and needs to see size, Tensors # are seen in shape
+                pad_diff_h = self.size - h 
+
+                pad_diff_w =self.size - w
+                
+                padding = [0, pad_diff_h, pad_diff_w, 0]
+                padder = Pad(padding)
+                img = padder(img)
+
+                return img
+
+
+
+        self.transform = Compose([
+            FixedHeightResize(cfg['image_size'][0]),
+            RandomHorizontalFlip(p=0.5),
+            RandomVerticalFlip(p=0.5),
+            RandomAdjustSharpness(sharpness_factor=2, p=0.5),
+            ColorJitter(brightness=.5, 
+                         contrast=.3, 
+                         saturation=.5),    
+            ToTensor()
         ])
         
         # index data into list
@@ -39,8 +75,7 @@ class CTDataset(Dataset):
         # load annotation file
         annoPath = os.path.join(
             self.data_root,
-            'eccv_18_annotation_files',
-            'train_annotations.json' if self.split=='train' else 'cis_val_annotations.json'
+            'train/train.json' if self.split=='train' else 'val/val.json'
         )
         meta = json.load(open(annoPath, 'r'))
 
@@ -57,7 +92,10 @@ class CTDataset(Dataset):
             # append image-label tuple to data
             imgFileName = images[imgID]
             label = anno['category_id']
-            labelIndex = labels[label]
+            try:
+                labelIndex = labels[label]
+            except:
+                print('bad', anno['image_id'])
             self.data.append([imgFileName, labelIndex])
             images_covered.add(imgID)       # make sure image is only added once to dataset
     
@@ -77,7 +115,9 @@ class CTDataset(Dataset):
         image_name, label = self.data[idx]              # see line 57 above where we added these two items to the self.data list
 
         # load image
-        image_path = os.path.join(self.data_root, 'eccv_18_all_images_sm', image_name)
+        image_path = os.path.join(self.data_root,
+                                   'train/' if self.split=='train' else 'val/', 
+                                   image_name)
         img = Image.open(image_path).convert('RGB')     # the ".convert" makes sure we always get three bands in Red, Green, Blue order
 
         # transform: see lines 31ff above where we define our transformations
