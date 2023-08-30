@@ -9,6 +9,7 @@ num_workers: 4
 
 # dataset parameters
 data_root: data/allclass
+project_name: insect_classifier
 experiment_name: test
 num_classes: 29
 
