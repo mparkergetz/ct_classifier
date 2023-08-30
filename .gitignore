@@ -1,8 +1,10 @@
 datasets
 model_states
+ct_classifier/data
+jsons
 
 __pycache__
 *.pyc
-
+*.png
 .vscode
 .DS_Store
