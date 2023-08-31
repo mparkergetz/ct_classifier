@@ -16,7 +16,7 @@
 import os
 import json
 from torch.utils.data import Dataset
-from torchvision.transforms import Compose, Resize, ToTensor, Pad, functional, RandomVerticalFlip, RandomHorizontalFlip, RandomAdjustSharpness, ColorJitter
+import torchvision.transforms as T
 from PIL import Image
 import math
 
@@ -40,10 +40,10 @@ class CTDataset(Dataset):
                 aspect_ratio = float(h) / float(w)
                 if h>w:
                     new_w = math.ceil(self.size / aspect_ratio)
-                    img = functional.resize(img, (self.size, new_w))
+                    img = T.functional.resize(img, (self.size, new_w))
                 else:
                     new_h = math.ceil( aspect_ratio * self.size) # it eas / before diving
-                    img = functional.resize(img, (new_h,self.size))
+                    img = T.functional.resize(img, (new_h,self.size))
 
                 w,h = img.size # PIL image formats are in w and h, transformed to rgb, h, w later, and needs to see size, Tensors # are seen in shape
                 pad_diff_h = self.size - h 
@@ -51,22 +51,25 @@ class CTDataset(Dataset):
                 pad_diff_w =self.size - w
                 
                 padding = [0, pad_diff_h, pad_diff_w, 0]
-                padder = Pad(padding)
+                padder = T.Pad(padding)
                 img = padder(img)
 
                 return img
 
 
 
-        self.transform = Compose([
+        self.transform = T.Compose([
             FixedHeightResize(cfg['image_size'][0]),
-            RandomHorizontalFlip(p=0.5),
-            RandomVerticalFlip(p=0.5),
-            RandomAdjustSharpness(sharpness_factor=2, p=0.5),
-            ColorJitter(brightness=.5, 
+            T.RandomHorizontalFlip(p=0.5),
+            T.RandomVerticalFlip(p=0.5),
+            T.RandomAdjustSharpness(sharpness_factor=2, p=0.5),
+            T.ColorJitter(brightness=.5, 
                          contrast=.3, 
-                         saturation=.5),    
-            ToTensor()
+                         saturation=.5),
+            T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5)),
+            T.RandomRotation(degrees=(0, 180)), 
+            T.RandomCrop(size=cfg['image_size'][0]),   
+            T.ToTensor()
         ])
         
         # index data into list

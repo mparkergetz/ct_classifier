@@ -442,7 +442,7 @@ def main():
         last_lr = scheduler.get_last_lr()
 
         #  # Log learning rate, if you want to see where the steps are for example during training
-        wandb.log("learning_rate", last_lr[0], step=current_epoch)
+        wandb.log({"learning_rate": last_lr[0]})
 
 
         # # Print the experiment key to load in the evaluation file

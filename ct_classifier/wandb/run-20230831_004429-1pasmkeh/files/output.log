@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 461, in <module>
+    main()
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 360, in main
+    dl_train = create_dataloader(cfg, split='train') # was just train before
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 34, in create_dataloader
+    dataset_instance = CTDataset(cfg, split)
+  File "/home/michael/ct_classifier/ct_classifier/dataset.py", line 61, in __init__
+    self.transform = Compose([
+NameError: name 'Compose' is not defined

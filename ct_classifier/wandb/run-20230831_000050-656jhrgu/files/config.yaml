@@ -1,0 +1,75 @@
+wandb_version: 1
+
+seed:
+  desc: null
+  value: 32678456782
+device:
+  desc: null
+  value: cuda
+num_workers:
+  desc: null
+  value: 4
+data_root:
+  desc: null
+  value: data/allclass
+project_name:
+  desc: null
+  value: insect_classifier
+experiment_name:
+  desc: null
+  value: test
+num_classes:
+  desc: null
+  value: 29
+image_size:
+  desc: null
+  value:
+  - 224
+  - 224
+num_epochs:
+  desc: null
+  value: 200
+batch_size:
+  desc: null
+  value: 128
+learning_rate:
+  desc: null
+  value: 0.001
+weight_decay:
+  desc: null
+  value: 0.001
+scheduler_step_size:
+  desc: null
+  value: 1
+scheduler_gamma:
+  desc: null
+  value: 1
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.17
+    cli_version: 0.15.9
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1693440050.826713
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.9.17
+      5: 0.15.9
+      8:
+      - 5

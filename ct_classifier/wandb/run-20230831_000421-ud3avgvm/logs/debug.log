@@ -1,0 +1,27 @@
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Configure stats pid to 2883502
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Loading settings from /home/michael/.config/wandb/settings
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Loading settings from /home/michael/ct_classifier/ct_classifier/wandb/settings
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'ct_classifier/train.py', 'program': '/home/michael/ct_classifier/ct_classifier/train.py'}
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:_log_setup():524] Logging user logs to /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_000421-ud3avgvm/logs/debug.log
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:_log_setup():525] Logging internal logs to /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_000421-ud3avgvm/logs/debug-internal.log
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:init():564] calling init triggers
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'seed': 32678456782, 'device': 'cuda', 'num_workers': 4, 'data_root': 'data/allclass', 'project_name': 'insect_classifier', 'experiment_name': 'test', 'num_classes': 29, 'image_size': [224, 224], 'num_epochs': 200, 'batch_size': 128, 'learning_rate': 0.001, 'weight_decay': 0.001, 'scheduler_step_size': 1, 'scheduler_gamma': 1}
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:init():613] starting backend
+2023-08-31 00:04:21,200 INFO    MainThread:2883502 [wandb_init.py:init():617] setting up manager
+2023-08-31 00:04:21,201 INFO    MainThread:2883502 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-08-31 00:04:21,202 INFO    MainThread:2883502 [wandb_init.py:init():623] backend started and connected
+2023-08-31 00:04:21,204 INFO    MainThread:2883502 [wandb_init.py:init():714] updated telemetry
+2023-08-31 00:04:21,223 INFO    MainThread:2883502 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2023-08-31 00:04:21,440 INFO    MainThread:2883502 [wandb_run.py:_on_init():2180] communicating current version
+2023-08-31 00:04:21,487 INFO    MainThread:2883502 [wandb_run.py:_on_init():2189] got version response 
+2023-08-31 00:04:21,487 INFO    MainThread:2883502 [wandb_init.py:init():798] starting run threads in backend
+2023-08-31 00:04:23,063 INFO    MainThread:2883502 [wandb_run.py:_console_start():2159] atexit reg
+2023-08-31 00:04:23,063 INFO    MainThread:2883502 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-08-31 00:04:23,063 INFO    MainThread:2883502 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-08-31 00:04:23,063 INFO    MainThread:2883502 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-08-31 00:04:23,064 INFO    MainThread:2883502 [wandb_init.py:init():839] run started, returning control to user process
+2023-08-31 00:27:58,638 WARNING MsgRouterThr:2883502 [router.py:message_loop():77] message_loop has been closed

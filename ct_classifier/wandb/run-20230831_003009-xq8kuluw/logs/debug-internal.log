@@ -1,0 +1,282 @@
+2023-08-31 00:30:09,734 INFO    StreamThr :3069735 [internal.py:wandb_internal():86] W&B internal server running at pid: 3069735, started at: 2023-08-31 00:30:09.733530
+2023-08-31 00:30:09,735 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status
+2023-08-31 00:30:09,737 INFO    WriterThread:3069735 [datastore.py:open_for_write():85] open: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/run-xq8kuluw.wandb
+2023-08-31 00:30:09,737 DEBUG   SenderThread:3069735 [sender.py:send():379] send: header
+2023-08-31 00:30:09,821 DEBUG   SenderThread:3069735 [sender.py:send():379] send: run
+2023-08-31 00:30:10,023 INFO    SenderThread:3069735 [dir_watcher.py:__init__():211] watching files in: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files
+2023-08-31 00:30:10,023 INFO    SenderThread:3069735 [sender.py:_start_run_threads():1121] run started: xq8kuluw with start time 1693441809.73326
+2023-08-31 00:30:10,023 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:10,024 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:10,030 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: check_version
+2023-08-31 00:30:10,030 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: check_version
+2023-08-31 00:30:10,124 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: run_start
+2023-08-31 00:30:10,130 DEBUG   HandlerThread:3069735 [system_info.py:__init__():31] System info init
+2023-08-31 00:30:10,130 DEBUG   HandlerThread:3069735 [system_info.py:__init__():46] System info init done
+2023-08-31 00:30:10,130 INFO    HandlerThread:3069735 [system_monitor.py:start():181] Starting system monitor
+2023-08-31 00:30:10,130 INFO    SystemMonitor:3069735 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-08-31 00:30:10,130 INFO    HandlerThread:3069735 [system_monitor.py:probe():201] Collecting system info
+2023-08-31 00:30:10,130 INFO    SystemMonitor:3069735 [interfaces.py:start():190] Started cpu monitoring
+2023-08-31 00:30:10,131 INFO    SystemMonitor:3069735 [interfaces.py:start():190] Started disk monitoring
+2023-08-31 00:30:10,131 INFO    SystemMonitor:3069735 [interfaces.py:start():190] Started gpu monitoring
+2023-08-31 00:30:10,131 INFO    SystemMonitor:3069735 [interfaces.py:start():190] Started memory monitoring
+2023-08-31 00:30:10,131 INFO    SystemMonitor:3069735 [interfaces.py:start():190] Started network monitoring
+2023-08-31 00:30:10,247 DEBUG   HandlerThread:3069735 [system_info.py:probe():195] Probing system
+2023-08-31 00:30:10,253 DEBUG   HandlerThread:3069735 [system_info.py:_probe_git():180] Probing git
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_info.py:_probe_git():188] Probing git done
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_info.py:probe():240] Probing system done
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-35-generic-x86_64-with-glibc2.31', 'python': '3.9.17', 'heartbeatAt': '2023-08-31T00:30:10.247305', 'startedAt': '2023-08-31T00:30:09.729352', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/michael/ct_classifier/ct_classifier/train.py', 'codePath': 'ct_classifier/train.py', 'git': {'remote': 'https://github.com/mparkergetz/ct_classifier', 'commit': 'ab75650979bfe29b08f71b7b45fb2d0882946035'}, 'email': 'getzm@oregonstate.edu', 'root': '/home/michael/ct_classifier', 'host': 'sara0-0', 'username': 'michael', 'executable': '/home/michael/miniconda3/envs/classifier/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2.8016979166666673, 'min': 1500.0, 'max': 2650.0}, 'cpu_freq_per_core': [{'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.877, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.617, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.621, 'min': 1500.0, 'max': 2650.0}, {'current': 2.897, 'min': 1500.0, 'max': 2650.0}, {'current': 3.605, 'min': 1500.0, 'max': 2650.0}, {'current': 3.499, 'min': 1500.0, 'max': 2650.0}, {'current': 2.899, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.993, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.477, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.364, 'min': 1500.0, 'max': 2650.0}, {'current': 3.253, 'min': 1500.0, 'max': 2650.0}, {'current': 3.402, 'min': 1500.0, 'max': 2650.0}, {'current': 3.595, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.17, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 2.645, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.592, 'min': 1500.0, 'max': 2650.0}, {'current': 2.842, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.554, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 3.482, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.912, 'min': 1500.0, 'max': 2650.0}, {'current': 3.531, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 2.632, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 3.409, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.761, 'min': 1500.0, 'max': 2650.0}, {'current': 2.808, 'min': 1500.0, 'max': 2650.0}, {'current': 3.301, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.897, 'min': 1500.0, 'max': 2650.0}, {'current': 3.624, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 3.562, 'min': 1500.0, 'max': 2650.0}, {'current': 3.623, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}, {'current': 2.65, 'min': 1500.0, 'max': 2650.0}], 'disk': {'total': 3575.2361793518066, 'used': 721.2583541870117}, 'gpu': 'NVIDIA A40', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}, {'name': 'NVIDIA A40', 'memory_total': 51527024640}], 'memory': {'total': 96.0}}
+2023-08-31 00:30:10,262 INFO    HandlerThread:3069735 [system_monitor.py:probe():211] Finished collecting system info
+2023-08-31 00:30:10,262 INFO    HandlerThread:3069735 [system_monitor.py:probe():214] Publishing system info
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_info.py:_save_pip():67] Saving pip packages done
+2023-08-31 00:30:10,262 DEBUG   HandlerThread:3069735 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-08-31 00:30:11,025 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_created():271] file/dir created: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/requirements.txt
+2023-08-31 00:30:11,025 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_created():271] file/dir created: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/conda-environment.yaml
+2023-08-31 00:30:11,025 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_created():271] file/dir created: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:30:12,925 DEBUG   HandlerThread:3069735 [system_info.py:_save_conda():86] Saving conda packages done
+2023-08-31 00:30:12,926 INFO    HandlerThread:3069735 [system_monitor.py:probe():216] Finished publishing system info
+2023-08-31 00:30:12,928 DEBUG   SenderThread:3069735 [sender.py:send():379] send: files
+2023-08-31 00:30:12,928 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-08-31 00:30:12,932 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-31 00:30:12,932 DEBUG   SenderThread:3069735 [sender.py:send():379] send: telemetry
+2023-08-31 00:30:12,932 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: stop_status
+2023-08-31 00:30:13,026 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/conda-environment.yaml
+2023-08-31 00:30:13,027 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_created():271] file/dir created: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-metadata.json
+2023-08-31 00:30:13,320 INFO    wandb-upload_0:3069735 [upload_job.py:push():131] Uploaded file /tmp/tmpmw2um34rwandb/taliwdpd-wandb-metadata.json
+2023-08-31 00:30:14,120 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_created():271] file/dir created: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:15,230 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:16,120 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:18,121 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:20,121 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:20,336 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:24,123 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:26,220 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:27,932 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-31 00:30:27,933 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: stop_status
+2023-08-31 00:30:30,125 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:31,340 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:32,126 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:34,127 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:34,441 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:34,442 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:34,442 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:34,442 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:34,443 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:34,443 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:34,444 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:34,444 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:34,444 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:34,444 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:34,445 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:34,445 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:34,445 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:34,445 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:34,445 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:34,445 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:34,722 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:34,723 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:34,724 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:34,725 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:35,127 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:30:36,128 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:36,726 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:40,130 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:41,729 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:42,131 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:42,131 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/config.yaml
+2023-08-31 00:30:44,132 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:44,335 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-31 00:30:44,335 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: stop_status
+2023-08-31 00:30:47,063 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:47,064 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:47,064 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:47,064 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:47,064 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:47,120 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:47,121 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:47,122 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:47,122 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:47,122 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:47,122 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:47,122 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:47,122 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:47,123 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:47,123 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:47,123 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:47,220 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:30:47,544 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:47,545 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:47,545 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:47,545 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:47,546 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:48,221 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:48,222 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:30:50,221 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:53,321 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:54,223 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:56,224 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:58,224 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:30:58,327 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-31 00:30:58,328 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:30:58,328 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: stop_status
+2023-08-31 00:30:59,023 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:59,023 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:59,024 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:59,024 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:59,024 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:59,025 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:59,025 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:59,026 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:59,026 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:59,026 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:59,026 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:59,026 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:59,026 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:59,027 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:59,027 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:59,027 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:30:59,225 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:30:59,257 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: partial_history
+2023-08-31 00:30:59,258 DEBUG   SenderThread:3069735 [sender.py:send():379] send: history
+2023-08-31 00:30:59,259 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: summary_record
+2023-08-31 00:30:59,259 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:31:00,225 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:31:00,226 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:31:01,429 DEBUG   SenderThread:3069735 [sender.py:send():379] send: exit
+2023-08-31 00:31:01,429 INFO    SenderThread:3069735 [sender.py:send_exit():584] handling exit code: 255
+2023-08-31 00:31:01,520 INFO    SenderThread:3069735 [sender.py:send_exit():586] handling runtime: 51
+2023-08-31 00:31:01,520 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:31:01,521 INFO    SenderThread:3069735 [sender.py:send_exit():592] send defer
+2023-08-31 00:31:01,521 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,521 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 0
+2023-08-31 00:31:01,521 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,521 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-08-31 00:31:01,521 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 1
+2023-08-31 00:31:01,521 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,521 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 1
+2023-08-31 00:31:01,522 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,522 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-08-31 00:31:01,522 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 2
+2023-08-31 00:31:01,522 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,522 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 2
+2023-08-31 00:31:01,522 INFO    HandlerThread:3069735 [system_monitor.py:finish():190] Stopping system monitor
+2023-08-31 00:31:01,522 INFO    HandlerThread:3069735 [interfaces.py:finish():202] Joined cpu monitor
+2023-08-31 00:31:01,522 INFO    HandlerThread:3069735 [interfaces.py:finish():202] Joined disk monitor
+2023-08-31 00:31:01,523 DEBUG   SystemMonitor:3069735 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-08-31 00:31:01,523 DEBUG   SystemMonitor:3069735 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-08-31 00:31:01,523 DEBUG   SystemMonitor:3069735 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-08-31 00:31:01,928 INFO    HandlerThread:3069735 [interfaces.py:finish():202] Joined gpu monitor
+2023-08-31 00:31:01,928 INFO    HandlerThread:3069735 [interfaces.py:finish():202] Joined memory monitor
+2023-08-31 00:31:01,928 INFO    HandlerThread:3069735 [interfaces.py:finish():202] Joined network monitor
+2023-08-31 00:31:01,930 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,930 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-08-31 00:31:01,930 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 3
+2023-08-31 00:31:01,930 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,930 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 3
+2023-08-31 00:31:01,931 DEBUG   SenderThread:3069735 [sender.py:send():379] send: stats
+2023-08-31 00:31:01,932 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,932 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-08-31 00:31:01,932 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 4
+2023-08-31 00:31:01,932 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,932 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 4
+2023-08-31 00:31:01,932 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,932 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-08-31 00:31:01,932 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 5
+2023-08-31 00:31:01,932 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,932 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 5
+2023-08-31 00:31:01,933 DEBUG   SenderThread:3069735 [sender.py:send():379] send: summary
+2023-08-31 00:31:01,933 INFO    SenderThread:3069735 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-31 00:31:01,933 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,933 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-08-31 00:31:01,933 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 6
+2023-08-31 00:31:01,933 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,934 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 6
+2023-08-31 00:31:01,934 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:01,934 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-08-31 00:31:01,934 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 7
+2023-08-31 00:31:01,934 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: status_report
+2023-08-31 00:31:01,934 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:01,934 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 7
+2023-08-31 00:31:02,019 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:02,019 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-08-31 00:31:02,227 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:31:02,227 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:31:02,430 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-31 00:31:03,833 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 8
+2023-08-31 00:31:03,834 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: poll_exit
+2023-08-31 00:31:03,834 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:03,834 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 8
+2023-08-31 00:31:03,834 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:03,834 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-08-31 00:31:03,835 INFO    SenderThread:3069735 [job_builder.py:build():281] Attempting to build job artifact
+2023-08-31 00:31:03,835 INFO    SenderThread:3069735 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-08-31 00:31:03,837 INFO    SenderThread:3069735 [job_builder.py:build():374] adding wandb-job metadata file
+2023-08-31 00:31:03,839 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 9
+2023-08-31 00:31:03,839 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:03,839 DEBUG   SenderThread:3069735 [sender.py:send():379] send: artifact
+2023-08-31 00:31:03,839 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 9
+2023-08-31 00:31:04,101 INFO    SenderThread:3069735 [sender.py:send_artifact():1475] sent artifact job-https___github.com_mparkergetz_ct_classifier_ct_classifier_train.py - {'id': 'QXJ0aWZhY3Q6NTU1Njk3ODY4', 'digest': '2170277ae1ab1bd8e527043b73aa79ce', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_mparkergetz_ct_classifier_ct_classifier_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_mparkergetz_ct_classifier_ct_classifier_train.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjkzOTQ3NTM3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTU1Njk3ODY4', 'versionIndex': 1}}, 'version': 'v1'}
+2023-08-31 00:31:04,101 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:04,101 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-08-31 00:31:04,101 INFO    SenderThread:3069735 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-08-31 00:31:04,227 INFO    Thread-12 :3069735 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:31:04,228 INFO    SenderThread:3069735 [dir_watcher.py:finish():388] scan: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files
+2023-08-31 00:31:04,228 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/config.yaml config.yaml
+2023-08-31 00:31:04,228 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json wandb-summary.json
+2023-08-31 00:31:04,228 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/requirements.txt requirements.txt
+2023-08-31 00:31:04,232 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/conda-environment.yaml conda-environment.yaml
+2023-08-31 00:31:04,322 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-metadata.json wandb-metadata.json
+2023-08-31 00:31:04,322 INFO    SenderThread:3069735 [dir_watcher.py:finish():402] scan save: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log output.log
+2023-08-31 00:31:04,324 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 10
+2023-08-31 00:31:04,325 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:04,325 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 10
+2023-08-31 00:31:04,325 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:04,325 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-08-31 00:31:04,325 INFO    SenderThread:3069735 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-31 00:31:04,646 INFO    wandb-upload_0:3069735 [upload_job.py:push():131] Uploaded file /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/wandb-summary.json
+2023-08-31 00:31:04,819 INFO    wandb-upload_1:3069735 [upload_job.py:push():131] Uploaded file /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/config.yaml
+2023-08-31 00:31:05,005 INFO    wandb-upload_2:3069735 [upload_job.py:push():131] Uploaded file /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/requirements.txt
+2023-08-31 00:31:05,095 INFO    wandb-upload_4:3069735 [upload_job.py:push():131] Uploaded file /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/output.log
+2023-08-31 00:31:05,103 INFO    wandb-upload_3:3069735 [upload_job.py:push():131] Uploaded file /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/files/conda-environment.yaml
+2023-08-31 00:31:05,303 INFO    Thread-11 :3069735 [sender.py:transition_state():612] send defer: 11
+2023-08-31 00:31:05,303 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:05,304 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 11
+2023-08-31 00:31:05,304 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:05,304 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-08-31 00:31:05,304 INFO    SenderThread:3069735 [file_pusher.py:join():164] waiting for file pusher
+2023-08-31 00:31:05,304 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 12
+2023-08-31 00:31:05,304 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:05,304 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 12
+2023-08-31 00:31:05,319 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:05,319 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-08-31 00:31:05,319 INFO    SenderThread:3069735 [file_stream.py:finish():593] file stream finish called
+2023-08-31 00:31:05,420 INFO    SenderThread:3069735 [file_stream.py:finish():597] file stream finish is done
+2023-08-31 00:31:05,420 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 13
+2023-08-31 00:31:05,420 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:05,421 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 13
+2023-08-31 00:31:05,421 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:05,421 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-08-31 00:31:05,421 INFO    SenderThread:3069735 [sender.py:transition_state():612] send defer: 14
+2023-08-31 00:31:05,421 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: defer
+2023-08-31 00:31:05,422 INFO    HandlerThread:3069735 [handler.py:handle_request_defer():170] handle defer: 14
+2023-08-31 00:31:05,422 DEBUG   SenderThread:3069735 [sender.py:send():379] send: final
+2023-08-31 00:31:05,422 DEBUG   SenderThread:3069735 [sender.py:send():379] send: footer
+2023-08-31 00:31:05,422 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: defer
+2023-08-31 00:31:05,422 INFO    SenderThread:3069735 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-08-31 00:31:05,423 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-31 00:31:05,424 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: poll_exit
+2023-08-31 00:31:05,424 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: server_info
+2023-08-31 00:31:05,424 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: server_info
+2023-08-31 00:31:05,426 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: get_summary
+2023-08-31 00:31:05,426 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: sampled_history
+2023-08-31 00:31:05,427 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: job_info
+2023-08-31 00:31:05,456 DEBUG   SenderThread:3069735 [sender.py:send_request():406] send_request: job_info
+2023-08-31 00:31:05,457 INFO    MainThread:3069735 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-08-31 00:31:05,520 INFO    MainThread:3069735 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-08-31 00:31:05,520 INFO    MainThread:3069735 [wandb_run.py:_footer_sync_info():3440] logging synced files
+2023-08-31 00:31:05,521 DEBUG   HandlerThread:3069735 [handler.py:handle_request():144] handle_request: shutdown
+2023-08-31 00:31:05,521 INFO    HandlerThread:3069735 [handler.py:finish():861] shutting down handler
+2023-08-31 00:31:06,427 INFO    WriterThread:3069735 [datastore.py:close():294] close: /home/michael/ct_classifier/ct_classifier/wandb/run-20230831_003009-xq8kuluw/run-xq8kuluw.wandb
+2023-08-31 00:31:06,457 INFO    SenderThread:3069735 [sender.py:finish():1552] shutting down sender
+2023-08-31 00:31:06,457 INFO    SenderThread:3069735 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-31 00:31:06,457 INFO    SenderThread:3069735 [file_pusher.py:join():164] waiting for file pusher

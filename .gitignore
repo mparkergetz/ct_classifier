@@ -8,3 +8,5 @@ __pycache__
 *.png
 .vscode
 .DS_Store
+
+all_model_states

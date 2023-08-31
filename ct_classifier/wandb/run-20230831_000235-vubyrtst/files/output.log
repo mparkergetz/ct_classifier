@@ -1,0 +1,48 @@
+Print the length of the dataset
+2609
+tensor([ 6,  0,  5,  2,  7,  0,  2,  6,  1,  0,  1,  1,  5,  7, 11,  3,  1,  0,
+         7, 13,  8,  3,  7,  8,  0,  2,  0,  2,  1,  1,  7,  9, 12,  0,  0,  4,
+         1,  1,  2,  0,  1, 13,  8,  8,  9,  1,  2,  7,  8,  0,  1,  1,  8,  1,
+         7,  6,  7,  8,  3, 13,  8,  4,  7,  0,  4,  3,  4,  1, 16,  0,  1,  7,
+         0,  1,  8,  2, 12,  3,  4,  0,  7,  0,  3,  0,  8,  3,  9,  8,  6,  3,
+         4,  8,  6,  2,  0,  1,  6,  0,  1,  0,  7,  7,  0,  1,  3,  4,  0,  8,
+         8,  0,  0,  3,  3,  8,  5,  1,  2,  6,  4,  4,  0,  9, 13,  1,  1,  8,
+         4,  5])
+Print the length of the dataset
+384
+Length of training dataloader
+21
+3
+Starting new model
+Epoch 1/200
+
+[Train] Loss: 3.08; OA: 17.74%: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:04<00:00,  5.64it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Train] Loss: 3.08; OA: 17.74%: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:05<00:00,  4.19it/s]
+[Val ] Loss: 3.70; OA: 0.78%: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.94it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Val ] Loss: 3.70; OA: 0.78%: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:01<00:00,  2.14it/s]
+Traceback (most recent call last):
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 461, in <module>
+    main()
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 445, in main
+    wandb.log("learning_rate", last_lr[0])
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 390, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 341, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 331, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1752, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1522, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary

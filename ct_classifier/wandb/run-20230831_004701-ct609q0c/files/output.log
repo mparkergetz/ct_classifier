@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 461, in <module>
+    main()
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 360, in main
+    dl_train = create_dataloader(cfg, split='train') # was just train before
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 34, in create_dataloader
+    dataset_instance = CTDataset(cfg, split)
+  File "/home/michael/ct_classifier/ct_classifier/dataset.py", line 62, in __init__
+    T.FixedHeightResize(cfg['image_size'][0]),
+AttributeError: module 'torchvision.transforms' has no attribute 'FixedHeightResize'

@@ -1,0 +1,81 @@
+Print the length of the dataset
+2019
+tensor([ 0, 11,  4,  8,  0,  4,  1,  0, 18,  2,  4, 13,  8,  3,  3, 13,  3,  3,
+         3,  4,  4,  8,  0,  8,  3, 12,  8,  2,  8,  5,  1,  8,  2, 17,  0, 12,
+         2,  0,  2,  8,  2,  2,  2,  1,  4,  8,  5,  8,  1,  8,  0,  2,  2,  0,
+         0,  3,  4,  4,  8, 11,  1,  2,  2,  0, 12,  1,  2,  2,  3,  8, 11,  3,
+         8, 13,  1,  1,  8,  1,  1,  3,  0,  1,  8,  3,  4,  0,  4,  8,  1,  2,
+         2,  1,  0,  0,  0,  0,  0,  2,  5,  2,  1, 12,  3,  1,  5,  5,  0,  8,
+         2,  4,  8,  1,  8,  5,  2,  1,  5, 13,  3,  2,  0, 12,  1,  2,  0,  1,
+         3,  1])
+Print the length of the dataset
+384
+Length of training dataloader
+16
+3
+Starting new model
+Epoch 1/200
+
+
+[Train] Loss: 2.07; OA: 50.62%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  2.33it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Train] Loss: 2.07; OA: 50.62%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.57it/s]
+[Val ] Loss: 4.37; OA: 4.43%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:02<00:00,  1.35it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Val ] Loss: 4.37; OA: 4.43%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:03<00:00,  1.03s/it]
+  0%|                                                                                                                                                                      | 0/16 [00:00<?, ?it/s]
+
+
+[Train] Loss: 1.19; OA: 72.27%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:07<00:00,  3.47it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Train] Loss: 1.19; OA: 72.27%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:07<00:00,  2.05it/s]
+
+[Val ] Loss: 4.82; OA: 4.17%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:04<00:00,  1.04s/it]
+[Val ] Loss: 4.82; OA: 4.17%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:04<00:00,  1.04s/it]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Val ] Loss: 4.82; OA: 4.17%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:04<00:00,  1.51s/it]
+
+
+[Train] Loss: 0.89; OA: 78.96%:  94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏       | 15/16 [00:08<00:00,  4.44it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Train] Loss: 0.89; OA: 78.96%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:08<00:00,  1.80it/s]
+[Val ] Loss: 4.97; OA: 7.29%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:02<00:00,  1.82it/s]/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/sklearn/metrics/_ranking.py:979: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+[Val ] Loss: 4.97; OA: 7.29%: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:02<00:00,  1.17it/s]
+Epoch 4/200
+  0%|                                                                                                                                                                      | 0/16 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 461, in <module>
+    main()
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 405, in main
+    loss_train, oa_train, mAP_train = train(cfg, dl_train, model, optim)
+  File "/home/michael/ct_classifier/ct_classifier/train.py", line 170, in train
+    for idx, (data, labels) in enumerate(dataLoader):       # see the last line of file "dataset.py" where we return the image tensor (data) and label
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1182, in _next_data
+    idx, data = self._get_data()
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1148, in _get_data
+    success, data = self._try_get_data()
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 986, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/michael/miniconda3/envs/classifier/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
