@@ -2,6 +2,7 @@ datasets
 model_states
 ct_classifier/data
 jsons
+wandb
 
 __pycache__
 *.pyc

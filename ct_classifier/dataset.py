@@ -86,7 +86,7 @@ class CTDataset(Dataset):
         # load annotation file
         annoPath = os.path.join(
             self.data_root,
-            'train/train_balanced.json' if self.split=='train' else 'val/val.json'
+            'train/train_balanced_reduced.json' if self.split=='train' else 'val/val_balanced_reduced.json'
         )
         meta = json.load(open(annoPath, 'r'))
 

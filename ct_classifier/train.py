@@ -207,12 +207,12 @@ def train(cfg, dataLoader, model, optimizer):
         progressBar.update(1)
 
     # Use label_binarize to be multi-label like settings
-    one_hot_labels = label_binarize(labels_list, classes=list(range(len(np.unique(labels_list))))) # this will index from 0-28 for 29 classes
+    one_hot_labels = label_binarize(labels_list, classes=list(range(cfg['num_classes']))) # this will index from 0-28 for 29 classes
     n_classes = one_hot_labels.shape[1]
-    print(n_classes)
-    one_hot_preds = label_binarize(pred_list, classes=list(range(len(np.unique(pred_list))))) # this will index from 0-28 for 29 classes
+    #print('nclasses labels', n_classes, one_hot_labels)
+    one_hot_preds = label_binarize(pred_list, classes=list(range(cfg['num_classes']))) # this will index from 0-28 for 29 classes
     n_classes = one_hot_preds.shape[1]
-    print(n_classes)
+    #print('nclasses preds', n_classes, one_hot_preds)
     # auprc = average_precision_score(labels.detach().cpu().numpy() , prediction.detach().cpu().numpy(),average=None)
     auprc = average_precision_score(one_hot_labels, one_hot_preds,average=None)
     mAP_train = np.mean(auprc)
@@ -283,12 +283,14 @@ def validate(cfg, dataLoader, model):
             progressBar.update(1)
 
         # Use label_binarize to be multi-label like settings
-        one_hot_labels = label_binarize(labels_list, classes=list(range(len(np.unique(labels_list))))) # this will index from 0-28 for 29 classes
+        one_hot_labels = label_binarize(labels_list, classes=list(range(cfg['num_classes']))) # this will index from 0-28 for 29 classes
         n_classes = one_hot_labels.shape[1]
+        #print('val_nclasses labels', n_classes)
 
-        one_hot_preds = label_binarize(pred_list, classes=list(range(len(np.unique(pred_list))))) # this will index from 0-28 for 29 classes
+        one_hot_preds = label_binarize(pred_list, classes=list(range(cfg['num_classes']))) # this will index from 0-28 for 29 classes
         n_classes = one_hot_preds.shape[1]
-
+        #print(one_hot_preds)
+        #print('val_nclasses preds', n_classes)
         # auprc = average_precision_score(labels.detach().cpu().numpy() , prediction.detach().cpu().numpy(),average=None)
         auprc = average_precision_score(one_hot_labels, one_hot_preds,average=None)
         mAP_val = np.mean(auprc)
