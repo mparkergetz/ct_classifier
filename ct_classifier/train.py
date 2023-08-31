@@ -32,8 +32,8 @@ def create_dataloader(cfg, split='train'):
         PyTorch DataLoader object.
     '''
     dataset_instance = CTDataset(cfg, split)       
-    print ("Print the length of the dataset")
-    print(len(dataset_instance))
+    #print ("Print the length of the dataset")
+    #print(len(dataset_instance))
     
     dataLoader = DataLoader(
             dataset=dataset_instance,
@@ -209,10 +209,10 @@ def train(cfg, dataLoader, model, optimizer):
     # Use label_binarize to be multi-label like settings
     one_hot_labels = label_binarize(labels_list, classes=list(range(len(np.unique(labels_list))))) # this will index from 0-28 for 29 classes
     n_classes = one_hot_labels.shape[1]
-
+    print(n_classes)
     one_hot_preds = label_binarize(pred_list, classes=list(range(len(np.unique(pred_list))))) # this will index from 0-28 for 29 classes
     n_classes = one_hot_preds.shape[1]
-
+    print(n_classes)
     # auprc = average_precision_score(labels.detach().cpu().numpy() , prediction.detach().cpu().numpy(),average=None)
     auprc = average_precision_score(one_hot_labels, one_hot_preds,average=None)
     mAP_train = np.mean(auprc)
@@ -292,7 +292,7 @@ def validate(cfg, dataLoader, model):
         # auprc = average_precision_score(labels.detach().cpu().numpy() , prediction.detach().cpu().numpy(),average=None)
         auprc = average_precision_score(one_hot_labels, one_hot_preds,average=None)
         mAP_val = np.mean(auprc)
-    
+
     # end of epoch; finalize
     progressBar.close()
     loss_total /= len(dataLoader)
@@ -324,6 +324,13 @@ def main():
     run = wandb.init(
         project=cfg['project_name'],
         config=cfg)
+    
+    artifact = wandb.Artifact(
+    name = "pytorch-data",
+    type = "dataset")
+
+    artifact.add_dir("media/")
+    wandb.log_artifact(artifact)
 
     
     resume = False  # Set this to True if you want to resume an existing experiment
@@ -360,15 +367,15 @@ def main():
     dl_train = create_dataloader(cfg, split='train') # was just train before
     sample_batch = next(iter(dl_train))
     inputs, labels = sample_batch
-    print (labels)
+    #print (labels)
 
 
     # Display the images
     fig = plt.figure(figsize=(12, 8))
-    for idx in range(12):
-        ax = fig.add_subplot(3, 4, idx + 1, xticks=[], yticks=[])
+    for idx in range(24):
+        ax = fig.add_subplot(4, 6, idx + 1, xticks=[], yticks=[])
         # The imshow function is used to display the images, and the loop displays a sample of 12 images along with their corresponding labels
-        ax.imshow(inputs[idx].permute(1, 2, 0)) # or is to transpose?
+        ax.imshow(inputs[idx].permute(1, 2, 0))
         ax.set_title(f"Label: {labels[idx]}")
 
         # print("Print the image paths for the images that are being plotted")
@@ -380,15 +387,39 @@ def main():
 
    
     plt.tight_layout()
-    plt.savefig("sanity_check.png")
+    plt.savefig("media/sanity_check_train.png")
 
     dl_val = create_dataloader(cfg, split='val')
-    print ("Length of training dataloader")
+    sample_batch = next(iter(dl_val))
+    inputs, labels = sample_batch
+    #print (labels)
+
+
+    # Display the images
+    fig = plt.figure(figsize=(12, 8))
+    for idx in range(24):
+        ax = fig.add_subplot(4, 6, idx + 1, xticks=[], yticks=[])
+        # The imshow function is used to display the images, and the loop displays a sample of 12 images along with their corresponding labels
+        ax.imshow(inputs[idx].permute(1, 2, 0))
+        ax.set_title(f"Label: {labels[idx]}")
+
+        # print("Print the image paths for the images that are being plotted")
+        # print (image_path(idx))
+        # image_name, _ = dataset.data[idx]  # Assuming dataset is the instance of your CustomDataset
+        # image_path = os.path.join(dl_train.data_root, 'high', image_name)
+        # print(f"Image Path: {image_path}")
+        # ax.set_title(f"Label: {labels[idx]}\nPath: {image_paths[idx]}") 
+
+   
+    plt.tight_layout()
+    plt.savefig("media/sanity_check_val.png")
+
+    #print ("Length of training dataloader")
 
     # Number of training samples divided by batch size
-    print(len(dl_train))
+    #print(len(dl_train))
     # print ("Length of validation dataloader")
-    print(len(dl_val))
+    #print(len(dl_val))
 
     # initialize model
     model, current_epoch = load_model(cfg) # load_latest_version=True
@@ -425,7 +456,7 @@ def main():
         # # Group mAP metrics in a plot
         wandb.log({'Training mAP': mAP_train, 'Validation mAP': mAP_val})
 
-        wandb.log(stats)
+        #wandb.log(stats)
 
 
         #  # Log hyperparameters like the learning rate and the batch size

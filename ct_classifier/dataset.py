@@ -19,6 +19,7 @@ from torch.utils.data import Dataset
 import torchvision.transforms as T
 from PIL import Image
 import math
+import random
 
 
 class CTDataset(Dataset):
@@ -71,26 +72,33 @@ class CTDataset(Dataset):
             T.RandomCrop(size=cfg['image_size'][0]),   
             T.ToTensor()
         ])
+
+        self.to_tensor = T.Compose([
+            FixedHeightResize(cfg['image_size'][0]),
+            T.ToTensor()
+        ])
         
+
+
         # index data into list
         self.data = []
 
         # load annotation file
         annoPath = os.path.join(
             self.data_root,
-            'train/train.json' if self.split=='train' else 'val/val.json'
+            'train/train_balanced.json' if self.split=='train' else 'val/val.json'
         )
         meta = json.load(open(annoPath, 'r'))
 
         images = dict([[i['id'], i['file_name']] for i in meta['images']])          # image id to filename lookup
-        labels = dict([[c['id'], idx] for idx, c in enumerate(meta['categories'])]) # custom labelclass indices that start at zero
-        
+        labels = dict([[c['id'], idx] for idx, c in enumerate(meta['categories'])]) # custom labelclass indices that start at zero   
+        print('label len', len(labels))
         # since we're doing classification, we're just taking the first annotation per image and drop the rest
-        images_covered = set()      # all those images for which we have already assigned a label
+        #images_covered = set()      # all those images for which we have already assigned a label
         for anno in meta['annotations']:
             imgID = anno['image_id']
-            if imgID in images_covered:
-                continue
+            # if imgID in images_covered:
+            #     continue
             
             # append image-label tuple to data
             imgFileName = images[imgID]
@@ -100,7 +108,7 @@ class CTDataset(Dataset):
             except:
                 print('bad', anno['image_id'])
             self.data.append([imgFileName, labelIndex])
-            images_covered.add(imgID)       # make sure image is only added once to dataset
+            #images_covered.add(imgID)       # make sure image is only added once to dataset
     
 
     def __len__(self):
@@ -123,7 +131,9 @@ class CTDataset(Dataset):
                                    image_name)
         img = Image.open(image_path).convert('RGB')     # the ".convert" makes sure we always get three bands in Red, Green, Blue order
 
-        # transform: see lines 31ff above where we define our transformations
-        img_tensor = self.transform(img)
+        if self.split=='train':
+            img_tensor = self.transform(img)
+        else:
+            img_tensor = self.to_tensor(img)
 
         return img_tensor, label
