@@ -27,6 +27,7 @@ class CustomResNet18(nn.Module):
         self.feature_extractor.fc = nn.Identity()                       # discard last layer...
 
         self.classifier = nn.Linear(in_features, num_classes)           # ...and create a new one
+        self.dropout = nn.Dropout(0.5)
     
 
     def forward(self, x):
@@ -35,7 +36,7 @@ class CustomResNet18(nn.Module):
             applying our modified ResNet-18 on the input tensor ("x") and then
             apply the final classifier layer on the ResNet-18 output to get our
             num_classes prediction.
-        '''
+        ''' 
         # x.size(): [B x 3 x W x H]
         features = self.feature_extractor(x)    # features.size(): [B x 512 x W x H]
         prediction = self.classifier(features)  # prediction.size(): [B x num_classes]
